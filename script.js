@@ -79,7 +79,6 @@ function drawHeart(k) {
   }
   ctx.stroke();
 
-  // Update k value display
   kDisplay.textContent = `k = ${k.toFixed(2)}`;
 }
 
@@ -87,11 +86,10 @@ let k = 0;
 function animate() {
   k += 0.13;
   if (k >= 400) {
-    k = 0; // Reset k when it reaches 450
+    k = 0; 
   }
   drawHeart(k);
 
-  // Format k to always show three digits before the decimal
   kDisplay.textContent = `k = ${k.toFixed(2).padStart(6, '0')}`;
 
   requestAnimationFrame(animate);
