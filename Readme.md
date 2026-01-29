@@ -5,7 +5,7 @@ The curve is generated from a custom analytical equation that combines a classic
 
 The goal of this project is **mathematical visualization**, not decorative graphics.
 
-![Animated heart](images/image-2.png)
+![Animated heart](Images/image-2.png)
 
 ---
 
@@ -16,6 +16,8 @@ The curve is defined by:
 \[
 y = |x|^(2/3) + 0.9 * sqrt(|x|) * sin(kx) * sqrt(3 - x^2)
 \]
+![Equation](Images/image-3.png)
+
 
 where:
 - `x ∈ [-2, 2]`
@@ -44,10 +46,10 @@ This term alone produces a static, recognizable heart profile.
 ### 2. Trigonometric Modulation Term
 
 \[
-0.9 * sqrt(|x|) * sin(kx) * sqrt(3 - x^2)   
+0.9 * sqrt(|x|) * sin(kx)*sqrt(3 - x^2)   
 \]
 
-![Heart curve](images/image-1.png)
+![Heart curve](Images/image-1.png)
 
 
 This term introduces **controlled oscillatory deformation**:
