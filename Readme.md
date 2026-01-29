@@ -16,6 +16,8 @@ The curve is defined by:
 \[
 y = |x|^(2/3) + 0.9 * sqrt(|x|) * sin(kx) * sqrt(3 - x^2)
 \]
+
+
 ![Equation](Images/image-3.png)
 
 
