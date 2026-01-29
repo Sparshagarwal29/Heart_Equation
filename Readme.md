@@ -1,9 +1,11 @@
-# Animated Heart Curve Visualization (HTML Canvas)
+# Animated Heart Curve Visualization 
 
 This project visualizes a **heart-shaped mathematical curve** rendered in real time using the HTML5 Canvas API.  
 The curve is generated from a custom analytical equation that combines a classical heart-curve component with a trigonometric modulation, producing a continuously evolving animation.
 
 The goal of this project is **mathematical visualization**, not decorative graphics.
+
+![Animated heart](images/image-2.png)
 
 ---
 
@@ -12,11 +14,11 @@ The goal of this project is **mathematical visualization**, not decorative graph
 The curve is defined by:
 
 \[
-y = |x|^{\frac{2}{3}} + 0.9 \sqrt{|x|}\,\sin(kx)\sqrt{3 - x^2}
+y = |x|^(2/3) + 0.9 * sqrt(|x|) * sin(kx) * sqrt(3 - x^2)
 \]
 
 where:
-- \(x \in [-2, 2]\)
+- `x ∈ [-2, 2]`
 - \(k\) is a time-varying parameter
 
 ---
@@ -26,7 +28,7 @@ where:
 ### 1. Base Heart Component
 
 \[
-|x|^{\frac{2}{3}}
+|x|^(2/3)
 \]
 
 This term is a **well-known heart-shaped function** used in several classical heart curve formulations.  
@@ -42,8 +44,11 @@ This term alone produces a static, recognizable heart profile.
 ### 2. Trigonometric Modulation Term
 
 \[
-0.9 \sqrt{|x|}\,\sin(kx)\sqrt{3 - x^2}
+0.9 * sqrt(|x|) * sin(kx) * sqrt(3 - x^2)   
 \]
+
+![Heart curve](images/image-1.png)
+
 
 This term introduces **controlled oscillatory deformation**:
 
@@ -60,8 +65,6 @@ Together, these ensure the deformation remains continuous and bounded.
 
 - `k` is incremented every animation frame
 - Increasing `k` increases oscillation density
-- The curve evolves without changing its fundamental structure
-- Resetting `k` prevents floating-point instability
 
 This produces a **time-dependent curve**, not a static plot.
 
@@ -73,7 +76,7 @@ This curve **is not a cardioid**.
 
 A cardioid is a specific polar curve defined by:
 \[
-r = a(1 \pm \cos\theta)
+r = a(1 ± cosθ)
 \]
 
 While cardioids are heart-shaped, **not all heart-shaped curves are cardioids**.  
@@ -82,58 +85,16 @@ The equation used in this project belongs to a broader class of **heart-like ana
 Correct terminology matters.
 
 ---
+## References
 
-## Numerical Domain and Scaling
+1. Wolfram MathWorld — *Heart Curve*  
+   https://mathworld.wolfram.com/HeartCurve.html
 
-- Computation domain:
-- Values are scaled by a factor of `100` for visibility
-- The y-axis is inverted to match canvas coordinate space
+2. Weisstein, Eric W. *Cardioid.* Wolfram MathWorld  
+   https://mathworld.wolfram.com/Cardioid.html
 
-This choice balances numerical stability and visual clarity.
-
----
-
-## Rendering Approach
-
-- Implemented using the **HTML5 Canvas 2D context**
-- The curve is rendered as a continuous polyline
-- Axes are drawn explicitly for mathematical reference
-- Animation is driven by `requestAnimationFrame()` for smooth rendering
-
-Canvas is used instead of SVG to allow efficient real-time recomputation.
-
----
-
-## Why Canvas (Not SVG)
-
-- Better suited for frame-based animation
-- Lower overhead for continuous redraws
-- Direct control over rendering pipeline
-- Ideal for mathematical plotting at 60 FPS
-
----
-
-## Educational Value
-
-This project demonstrates:
-
-- Translating mathematical equations into graphics
-- Domain constraints in numerical visualization
-- Time-dependent parameter modulation
-- Practical use of trigonometry in animation
-- Mathematical rigor applied to creative coding
-
-It sits at the intersection of **mathematics**, **computer graphics**, and **interactive visualization**.
-
----
-
-## Limitations
-
-- The equation is a handcrafted visualization model
-- It is not derived from a single canonical heart curve
-- The focus is visual intuition rather than formal proof
-
-These limitations are intentional and transparent.
+3. A Reffernce Paper :
+   https://www.matec-conferences.org/articles/matecconf/pdf/2018/56/matecconf_aasec2018_01001.pdf
 
 ---
 
