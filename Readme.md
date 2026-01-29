@@ -46,8 +46,7 @@ This term alone produces a static, recognizable heart profile.
 ### 2. Trigonometric Modulation Term
 
 \[
-0.9 * sqrt(|x|) * sin(kx)*sqrt(3 - x^2)   
-\]
+0.9 * sqrt(|x|) * sin(kx)*sqrt(3 - x^2)   \]
 
 ![Heart curve](Images/image-1.png)
 
